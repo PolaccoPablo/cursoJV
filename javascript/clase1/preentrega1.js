@@ -1,4 +1,30 @@
-console.log("Bienvenido al simulador de compras")
+//----------------------- Producto -------------------------------
+
+class Producto {
+    constructor(nombre, precio, stock){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
+
+    mostrar(indice) {
+        console.log(`${indice}) ${this.nombre} tiene un precio de $${this.precio} y hay ${this.stock} unidades`)
+
+    }
+}
+
+//--------------------------------------------------------------
+console.log("Bienvenido a Pocima De Luna ")
+ 
+const productos = [new Producto("Sahumerio", 1500, 20), new Producto("Vela", 2500, 5), new Producto("Perfume", 3500, 15)]
+
+console.log("Los productos disponibles son:")
+for (let i = 0; i < productos.length; i++) {
+    //console.log(`${i+1}) `)
+    productos[i].mostrar(i+1)
+}
+
+
 
 let respuesta = "si"
 while (respuesta == "si"){
@@ -32,6 +58,7 @@ function AplicarDescuento (total){
 return desc
 }
  
+
 
 
     
